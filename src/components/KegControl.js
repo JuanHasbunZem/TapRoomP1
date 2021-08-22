@@ -1,17 +1,14 @@
 import React from 'react';
+import KegList from './KegList';
+import KegDetail from './KegDetails';
+import NewKegForm from './NewKegForm';
 
 class KegControl extends React.Component {
   constructor(props) {
     super(props);
     this.state={
       formVisibleOnPage: false,
-      masterKegList: [
-        {name: 'Dark Iron Brew', brand: 'Dark Iron', price: '$8.25', flavor: 'Dark Rum', id: 0, amount: 50},
-        {name: 'Coors Light', brand: 'Coors', price: '$7.40', flavor: 'Lager', id: 1, amount: 50},
-        {name: 'Blue Moon', brand: 'Blue Moon', price: '$9.75', flavor: 'Belgin Wheats', id: 2, amount: 50},
-        {name: 'Ghostfish Gluten FreeIPA', brand: 'Ghost Fish', price: '$8.25', flavor: 'IPA', id: 3, amount: 50}
-      ],
-      selectedKeg: null
+      masterKegList: [],
     };
   }
 
@@ -31,12 +28,23 @@ class KegControl extends React.Component {
     const newMasterKegList = this.state.masterKegList.concat(newKeg);
     this.setState({
       masterKegList: newMasterKegList,
-      formVisibleOnPage: false});
+      formVisibleOnPage: false,
+      selectedKeg: null
+    });
   }
 
   handleSelect = (id) => {
     const selectedKeg = this.state.masterKegList.filter(m => m.id === id)[0];
     this.setState({selectedKeg: selectedKeg});
+  }
+
+  handleSellingPints = (bevToSell) => {
+    const soldMainKegList = this.state.newMasterKegList
+    .filter(keg => keg.id != this.state.selectedKeg.id)
+    .concat(bevToSell);
+    this.setState({
+      masterKegList: soldMainKegList
+    });
   }
 
   render(){
