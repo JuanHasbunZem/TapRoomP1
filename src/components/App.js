@@ -1,10 +1,12 @@
 import React from 'react';
-import KegControl from './components/KegControl.js';
+import Header from "./Header";
+import KegControl from './KegControl.js';
 
 
 function App() {
   return (
     <React.Fragment>
+      <Header />
       <KegControl />
     </React.Fragment>
   );
