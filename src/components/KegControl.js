@@ -40,7 +40,7 @@ class KegControl extends React.Component {
 
   handleSellingPints = (bevToSell) => {
     const soldMainKegList = this.state.newMasterKegList
-    .filter(keg => keg.id != this.state.selectedKeg.id)
+    .filter(keg => keg.id !== this.state.selectedKeg.id)
     .concat(bevToSell);
     this.setState({
       masterKegList: soldMainKegList
