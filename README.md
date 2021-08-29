@@ -15,7 +15,8 @@
   * Babel
 
 ## Outline
-Included is a tapRoom.png file that briefly displays how the React Components should interact with each other. Note: image was created before code was written and is subject to change.
+Included is a diagram that briefly displays how the React Components should interact with each other. Note: image was created before code was written and is subject to change.
+![tapRoom](https://user-images.githubusercontent.com/76922718/131256269-36dd7f84-717d-4d86-845e-bed304266eab.png)
 
 ## Description
 
