@@ -14,6 +14,9 @@
   * Jest
   * Babel
 
+## Outline
+Included is a tapRoom.png file that briefly displays how the React Components should interact with each other. Note: image was created before code was written and is subject to change.
+
 ## Description
 
 This program is a minor mock up of a tap room shopping list. The user will be able to submit new types of Kegs (through the new keg submission 'view') which will automatically populate with a Pint limit.  The main screen for the Kegs will display a short list of all submitted kegs, allowing the user to click any selection for further details. Included inside the further details portion of each Keg is a button to "buy" a pint, which also decreases the Pint count for that keg.
