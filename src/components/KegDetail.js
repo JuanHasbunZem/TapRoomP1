@@ -13,7 +13,7 @@ function KegDetail(props){
       <h1>Keg Details</h1>
       <h2>{keg.name} -- {keg.type}</h2>
       <h2>{keg.brand}</h2>
-      <h3>${keg.price} per pint</h3>
+      <h3>${keg.price} per Pint</h3>
       <h3>Pints Left in Keg: {keg.pints}</h3>
       <button disabled={keg.pints === 0 ? true : false} onClick={handleSellButton}>Sell a Pint</button>
       <hr />
